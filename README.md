@@ -1,7 +1,9 @@
 # SKYVR TEMPORARY STORAGE
 shoutout to https://github.com/396abc/skyvr for archiving.
 
-anyways, until presidentanvil makes another repo for skyvr, use this. i think i did replace all the loadstrings, but if i didnt i'll fix it as soon as i can.
+anyways, until presidentanvil makes another repo for skyvr, use this.
+
+SEEMS TO BE OPERATIONAL
 
 ```lua
 -- DO NOT RUN THIS IN VR MODE
