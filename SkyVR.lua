@@ -112,7 +112,7 @@ end
 t:TweenSize(UDim2.new(1,0,1,0),nil,Enum.EasingStyle.Linear,0.1)
 wait(0.06)
 if getgenv().HATDROP and not getgenv().fullbody then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/SkyVRHatdrop.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iedatemporarystore/SkyVR_TemporaryStorage/refs/heads/main/SkyVRHatdrop.lua"))()
 	TextLabel.Text = "Ready!"
 	task.delay(5,function()
 		loader:Destroy()
@@ -120,7 +120,7 @@ if getgenv().HATDROP and not getgenv().fullbody then
 	return
 end
 if getgenv().fullbody then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/presidentanvil/skyvr/main/SkyVRFullbody.lua"))()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iedatemporarystore/SkyVR_TemporaryStorage/refs/heads/main/SkyVRFullbody.lua"))()
 	TextLabel.Text = "Ready!"
 	task.delay(5,function()
 		loader:Destroy()
