@@ -3,8 +3,6 @@ shoutout to https://github.com/396abc/skyvr for archiving.
 
 anyways, until presidentanvil makes another repo for skyvr, use this.
 
-SEEMS TO BE OPERATIONAL
-
 ```lua
 -- DO NOT RUN THIS IN VR MODE
 skyvrversion = '3.0.0'
