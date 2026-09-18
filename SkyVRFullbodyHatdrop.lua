@@ -1,6 +1,3 @@
---testing random safeguards please ignore
---thanks
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/HatdropReanimation/main/Valuable%20Dependencies/thething.lua"))()
 pcall(function()loader:Destroy()end)
 local fpdh = workspace.FallenPartsDestroyHeight
@@ -16,7 +13,6 @@ getgenv().options.righthandrotoffset = CFrame.Angles(math.rad(getgenv().options.
 getgenv().options.rightlegrotoffset = CFrame.Angles(math.rad(getgenv().options.rightlegrotoffset.X),math.rad(getgenv().options.rightlegrotoffset.Y),math.rad(getgenv().options.rightlegrotoffset.Z))
 local AccessorySettings ={Torso={};LeftArm={getgenv().right};RightArm={getgenv().left};LeftLeg={getgenv().options.leftleg};RightLeg={getgenv().options.rightleg};LimbOffset=CFrame.Angles(math.pi/2,0,0);}
 getgenv().accoffsets =   {Torso={};LeftArm={getgenv().options.lefthandrotoffset};RightArm={getgenv().options.righthandrotoffset};LeftLeg={getgenv().options.leftlegrotoffset};RightLeg={getgenv().options.rightlegrotoffset};}
-print("testing to see if the update went through")
 
 local count = 0
 for i,v in pairs(getgenv().headhats) do
@@ -342,7 +338,6 @@ if VRReady then
 		if lastjoystickPosition.Magnitude == joystickPosition.Magnitude then VirtualBody.Humanoid:Move(Vector3.zero) return end
 		lastjoystickPosition = joystickPosition
 		local headCFrame = limbCFs.Head
-		if not headCFrame then return end
 		local joystickDirection = Vector3.new(-joystickPosition.X, 0, joystickPosition.Y)
 		if joystickDirection.Magnitude<=0.6 then VirtualBody.Humanoid:Move(Vector3.zero)  return end
 		local rotatedDirection = headCFrame:VectorToWorldSpace(joystickDirection)
@@ -1063,15 +1058,13 @@ function HatdropCallback(Character)
 		local id = filterMeshID((handle:IsA("MeshPart") and handle.MeshId) or handle:FindFirstChildOfClass("SpecialMesh").MeshId);
 		local limbName, foundthroughmeshid, index = findMeshID(id,v.Name,alreadyfound);
 		alreadyfound[limbName]=true;
-		handle.Transparency=getgenv().options.limbTransparency or 0.5;
+		handle.Transparency=getgenv().options.limbTransparency;
 		if limbName=="Head" then handle.Transparency=1 end;
 		if limbName=="Torso" then handle.Transparency=1 end;
 		handle.CanQuery = false;
 		handle.CanTouch = false;
 		local hatattcf = handle:FindFirstChildOfClass("Attachment");
-		if not hatattcf then continue end;
 		local headcf = VirtualRig:FindFirstChild(hatattcf.Name, true);
-		if not headcf and (limbName == "Head" or washead) then continue end;
 		local washead=false;
 		if limbName == "Head" then
 			for i,v in pairs(ExtraParts) do
