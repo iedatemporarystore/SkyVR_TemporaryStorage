@@ -1,3 +1,15 @@
+--[[
+oh hey so i've been looking at this for a few hours now
+
+to be fair i did update the readme a little late lol
+
+anyways i just added some safeguards to see if it'll fix anything or make it worse 
+
+its worth a shot
+
+if this doesnt work then im gonna go and revert it and probably call it quits since i got no other ideas sorry
+--]]
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/HatdropReanimation/main/Valuable%20Dependencies/thething.lua"))()
 pcall(function()loader:Destroy()end)
 local fpdh = workspace.FallenPartsDestroyHeight
@@ -338,6 +350,7 @@ if VRReady then
 		if lastjoystickPosition.Magnitude == joystickPosition.Magnitude then VirtualBody.Humanoid:Move(Vector3.zero) return end
 		lastjoystickPosition = joystickPosition
 		local headCFrame = limbCFs.Head
+		if not headCFrame then return end
 		local joystickDirection = Vector3.new(-joystickPosition.X, 0, joystickPosition.Y)
 		if joystickDirection.Magnitude<=0.6 then VirtualBody.Humanoid:Move(Vector3.zero)  return end
 		local rotatedDirection = headCFrame:VectorToWorldSpace(joystickDirection)
@@ -1058,13 +1071,15 @@ function HatdropCallback(Character)
 		local id = filterMeshID((handle:IsA("MeshPart") and handle.MeshId) or handle:FindFirstChildOfClass("SpecialMesh").MeshId);
 		local limbName, foundthroughmeshid, index = findMeshID(id,v.Name,alreadyfound);
 		alreadyfound[limbName]=true;
-		handle.Transparency=getgenv().options.limbTransparency;
+		handle.Transparency=getgenv().options.limbTransparency or 0.5;
 		if limbName=="Head" then handle.Transparency=1 end;
 		if limbName=="Torso" then handle.Transparency=1 end;
 		handle.CanQuery = false;
 		handle.CanTouch = false;
 		local hatattcf = handle:FindFirstChildOfClass("Attachment");
+		if not hatattcf then continue end;
 		local headcf = VirtualRig:FindFirstChild(hatattcf.Name, true);
+		if not headcf and (limbName == "Head" or washead) then continue end;
 		local washead=false;
 		if limbName == "Head" then
 			for i,v in pairs(ExtraParts) do
