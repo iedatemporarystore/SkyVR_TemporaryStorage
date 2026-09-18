@@ -9,6 +9,7 @@ its worth a shot
 
 if this doesnt work then im gonna go and revert it and probably call it quits since i got no other ideas sorry
 --]]
+print("testing to see if the update went through")
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/HatdropReanimation/main/Valuable%20Dependencies/thething.lua"))()
 pcall(function()loader:Destroy()end)
