@@ -4,7 +4,7 @@ anyways, until presidentanvil makes another repo for skyvr, use this.
 
 # 19/09/2026
 
-fullbody is broken it seems, i need confirmation on that
+fullbody is broken it seems, atleast for me, though havent seen anyone really talk about fullbody. to be fair, it is a few years old by now, so the method is broken or roblox screwed some stuff up.
 
 the first issue was value of type nil cannot be converted to a number, but this is fixable by adding "limbTransparency = (numberhere)," to the options.
 
