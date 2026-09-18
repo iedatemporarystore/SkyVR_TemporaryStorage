@@ -1,15 +1,5 @@
---[[
-oh hey so i've been looking at this for a few hours now
-
-to be fair i did update the readme a little late lol
-
-anyways i just added some safeguards to see if it'll fix anything or make it worse 
-
-its worth a shot
-
-if this doesnt work then im gonna go and revert it and probably call it quits since i got no other ideas sorry
---]]
-print("testing to see if the update went through")
+--testing random safeguards please ignore
+--thanks
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentAnvil/HatdropReanimation/main/Valuable%20Dependencies/thething.lua"))()
 pcall(function()loader:Destroy()end)
@@ -26,6 +16,7 @@ getgenv().options.righthandrotoffset = CFrame.Angles(math.rad(getgenv().options.
 getgenv().options.rightlegrotoffset = CFrame.Angles(math.rad(getgenv().options.rightlegrotoffset.X),math.rad(getgenv().options.rightlegrotoffset.Y),math.rad(getgenv().options.rightlegrotoffset.Z))
 local AccessorySettings ={Torso={};LeftArm={getgenv().right};RightArm={getgenv().left};LeftLeg={getgenv().options.leftleg};RightLeg={getgenv().options.rightleg};LimbOffset=CFrame.Angles(math.pi/2,0,0);}
 getgenv().accoffsets =   {Torso={};LeftArm={getgenv().options.lefthandrotoffset};RightArm={getgenv().options.righthandrotoffset};LeftLeg={getgenv().options.leftlegrotoffset};RightLeg={getgenv().options.rightlegrotoffset};}
+print("testing to see if the update went through")
 
 local count = 0
 for i,v in pairs(getgenv().headhats) do
