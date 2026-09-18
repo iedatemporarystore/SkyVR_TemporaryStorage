@@ -1,7 +1,11 @@
 # SKYVR TEMPORARY STORAGE
-shoutout to https://github.com/396abc/skyvr for archiving.
 
 anyways, until presidentanvil makes another repo for skyvr, use this.
+
+19/09/2026
+fullbody is broken it seems, i need confirmation on that
+the first issue was value of type nil cannot be converted to a number, but this is fixable by adding "limbTransparency = (numberhere)," to the options
+even with that, fullbody is broken, cant move and most hats are just gone, not sure how to fix it since im not exactly good at scripting, especially with stuff like this.
 
 ```lua
 -- DO NOT RUN THIS IN VR MODE
